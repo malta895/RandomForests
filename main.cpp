@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include"RandomForest.h"
 #include"MnistPreProcess.h"
 #define TRAIN_NUM 60000
@@ -7,6 +9,11 @@
 
 int main(int argc, const char * argv[])
 {
+  if(argc < 4){
+    std::cout << "Not enough arguments! Exiting..." << std::endl;
+    return -1;
+  }
+
     //1. prepare data
 	float**trainset;
 	float** testset;
